@@ -854,21 +854,6 @@ footer{
   #spk2{
     transform: translate(-20% , -70%);
   }
-  #navlink {
-        display: none;
-      }
-
-      #navpass {
-        display: none;
-      }
-
-      #hamburger {
-        display: flex;
-      }
-
-      #navcontainer {
-        justify-content: space-between;
-      }
 }
     @media (max-width: 1002px) {
 
