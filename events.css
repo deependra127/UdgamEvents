@@ -870,3 +870,21 @@ footer{
         justify-content: space-between;
       }
 }
+    @media (max-width: 1002px) {
+
+      #navlink {
+        display: none;
+      }
+
+      #navpass {
+        display: none;
+      }
+
+      #hamburger {
+        display: flex;
+      }
+
+      #navcontainer {
+        justify-content: space-between;
+      }
+    }
