@@ -83,16 +83,11 @@ body{
       color: #141131;
       text-align: center;
       font-family: 'Inter', system-ui, sans-serif;
-      font-size: 1.38188rem;
+      font-size: 2rem;
       font-style: normal;
       font-weight: 900;
       line-height: normal;
       cursor: pointer;
-    }
-    #navpass2 svg {
-      position: absolute;
-      left: 15px;
-      top: 0;
     }
 
     /* Hamburger menu - hidden by default */
@@ -134,36 +129,54 @@ body{
     /* Sidebar */
     #sidebar {
       position: fixed;
-      top: 0;
-      left: -300px;
-      width: 300px;
-      height: 100%;
-      background: rgba(20, 17, 49, 0.98);
-      backdrop-filter: blur(20px);
-      border-right: 1px solid #2C2945;
-      z-index: 999;
-      transition: left 0.3s ease;
-      padding: 30px 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-    }
-
-    #sidebar.active {
+      top: -500px;
       left: 0;
-    }
-
-    #sidebarLinks {
+      width: 90vw;
+      margin: 0 5vw;
+      height: 450px;
+      background: #E4E2FF;
+      backdrop-filter: blur(20px);
+      z-index: 999;
+      border-radius: 20px;
+      transition: bottom 0.3s ease;
+      padding: 30px 30px;
       display: flex;
       flex-direction: column;
-      gap: 25px;
+      align-items: center;
+      justify-content: space-between;
+    }
+    #sidebar.active {
+      top: 25px;
+    }
+    #sidebarhead{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: top;
+    }
+    #sidebarhead #svg1{
+      width: 30px;
+      height: auto;
+    }
+    #sidebarhead #svg2{
+      width: 30px;
+      height: 30px;
+    }
+    #sidebarLinks {
+      display: grid;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+      width: 100%;
+      height: auto;
     }
 
     #sidebarLinks a {
       text-decoration: none;
-      color: #FFF9F0;
+      color: #141131;
+      text-align: center;
       font-family: 'Inter', system-ui, sans-serif;
-      font-size: 1.32131rem;
+      font-size: 2rem;
       font-style: normal;
       font-weight: 700;
       line-height: normal;
@@ -472,7 +485,7 @@ h1, h2, h3, p{
   top: 220px;
   left: 200px;
   color: #0A0024;
-  text-align: justify;
+  text-align: left;
   font-family: 'Inter', system-ui, sans-serif;
   font-size: 1.25rem;
   font-style: normal;
@@ -757,7 +770,7 @@ footer{
   width: 70%;
   color: #FFF9F0;
   text-align: center;
-  font-family: Inter;
+  font-family: 'Inter', system-ui, sans-serif;
   font-size: 1.25rem;
   font-style: normal;
   font-weight: 700;
@@ -769,7 +782,7 @@ footer{
   align-items: top;
   justify-content: space-around;
   width: 65%;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
 }
 #f2 div{
   width: 33%;
@@ -855,8 +868,7 @@ footer{
     transform: translate(-20% , -70%);
   }
 }
-    @media (max-width: 1002px) {
-
+    @media (max-width: 1000px) {
       #navlink {
         display: none;
       }
@@ -871,5 +883,43 @@ footer{
 
       #navcontainer {
         justify-content: space-between;
+      }
+      #disrupt h2,#intern h2,#pmxh h2,#spkh h2{
+        font-size: 2.5rem;
+      }
+      #disrupt h3,#intern h3,#pmxh h3,#spkh h3,#exbg p{
+        font-size: 2rem;
+      }
+      #exbg{
+        height: 600px;
+      }
+      #exbbg{
+        height: 100%;
+      }
+      #exbg p{
+        width: 70%;
+        left: 140px;
+      }
+      #exor{
+        max-width: 20%;
+        height: 100%;
+      }
+      #exwr{
+        top: 15px;
+        left: 140px;
+      }
+      footer{
+        flex-direction: column;
+        gap: 30px;
+      }
+      #f12{
+        width: 100%;
+      }
+      #f2{
+        gap: 30px;
+        width: 100%;
+      }
+      #f1{
+        width: 60%;
       }
     }

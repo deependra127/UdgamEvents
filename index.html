@@ -29,7 +29,21 @@
   <!-- nav starts  -->
 
     <!-- Sidebar -->
+
+  <div id="sidebarOverlay"></div>
   <div id="sidebar">
+    <div id="sidebarhead">
+      <svg id="svg1" xmlns="http://www.w3.org/2000/svg" width="11" height="28" viewBox="0 0 11 28" fill="none">
+        <path d="M4.78049 8.78768L7.43862 0L10.8889 10.1346L4.78049 8.78768Z" fill="#141131"/>
+        <path d="M3.71329 22.9522L10.8258 12.9258L6.51244 28L3.71329 22.9522Z" fill="#141131"/>
+        <path d="M4.02572 10.7023C4.5062 13.0319 4.95981 15.2313 5.44175 17.569L0 14.7641C0.912886 12.8615 1.80439 11.0033 2.76693 8.99517C2.98187 9.92952 3.16098 10.7091 3.34387 11.5057L3.49434 12.1611L4.02572 10.7023Z" fill="#141131"/>
+        <path d="M4.86651 10.0059L10.7908 11.285L6.40331 17.5343C6.20042 16.5405 6.00226 15.5697 5.80517 14.6038C5.49458 13.0819 5.18653 11.5725 4.86651 10.0059Z" fill="#141131"/>
+        <path d="M5.38652 18.869L3.23197 21.9678C2.88968 21.3187 2.55304 20.6799 2.22014 20.0483C1.53694 18.752 0.869637 17.4859 0.202261 16.2226L5.38652 18.869Z" fill="#141131"/>
+      </svg>
+      <svg id="svg2" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+        <path d="M14.781 13.7198C14.8507 13.7895 14.906 13.8722 14.9437 13.9632C14.9814 14.0543 15.0008 14.1519 15.0008 14.2504C15.0008 14.349 14.9814 14.4465 14.9437 14.5376C14.906 14.6286 14.8507 14.7114 14.781 14.781C14.7114 14.8507 14.6286 14.906 14.5376 14.9437C14.4465 14.9814 14.349 15.0008 14.2504 15.0008C14.1519 15.0008 14.0543 14.9814 13.9632 14.9437C13.8722 14.906 13.7895 14.8507 13.7198 14.781L7.50042 8.56073L1.28104 14.781C1.14031 14.9218 0.94944 15.0008 0.750417 15.0008C0.551394 15.0008 0.360523 14.9218 0.219792 14.781C0.0790615 14.6403 3.92322e-09 14.4494 0 14.2504C-3.92322e-09 14.0514 0.0790615 13.8605 0.219792 13.7198L6.4401 7.50042L0.219792 1.28104C0.0790615 1.14031 0 0.94944 0 0.750417C0 0.551394 0.0790615 0.360523 0.219792 0.219792C0.360523 0.0790615 0.551394 0 0.750417 0C0.94944 0 1.14031 0.0790615 1.28104 0.219792L7.50042 6.4401L13.7198 0.219792C13.8605 0.0790615 14.0514 -3.92322e-09 14.2504 0C14.4494 3.92322e-09 14.6403 0.0790615 14.781 0.219792C14.9218 0.360523 15.0008 0.551394 15.0008 0.750417C15.0008 0.94944 14.9218 1.14031 14.781 1.28104L8.56073 7.50042L14.781 13.7198Z" fill="#141131"/>
+      </svg>
+    </div>
     <div id="sidebarLinks">
       <a href="">Home</a>
       <a href="">Events</a>
@@ -39,9 +53,6 @@
       <a href="">Contact Us</a>
     </div>
     <div id="navpass2">
-      <svg xmlns="http://www.w3.org/2000/svg" width="3" height="49" viewBox="0 0 3 49" fill="none">
-        <path d="M1.02246 1.02344L1.02246 47.0387" stroke="#2B2844" stroke-width="2.04529" stroke-linecap="square" stroke-dasharray="4.09 4.09"/>
-      </svg>    
       Get Pass    
     </div>
   </div>
@@ -139,7 +150,11 @@
   <section id="expo" class="box">
     <div id="exbg">
       <img src="./assets/sexpobg.svg" id="exbbg" alt="">
-      <img src="./assets/sexporange.svg" id="exor" alt="">
+
+      <picture>
+        <source media="(max-width: 1000px)" srcset="./assets/exporange.svg">
+        <img src="./assets/sexporange.svg" id="exor" alt="Description">
+      </picture>
       <img src="./assets/expowrite.svg" id="exwr" alt="">
       <p>Startup Expo Provides A Stage For Startups To Showcase Their Innovations, Gather Feedback And Connect With Investors. It Fosters Entrepreneuurship By Promoting Collaboration , Idea Exchange And Reserach Opportunities In Vibrant Ecosystem.</p>
     </div>
@@ -272,7 +287,7 @@
     });
 
     // Close sidebar when clicking any link
-    const sidebarLinks = document.querySelectorAll('#sidebarLinks a, #sidebar #navpass');
+    const sidebarLinks = document.querySelectorAll('#sidebarLinks a, #sidebar #svg2');
     sidebarLinks.forEach(link => {
       link.addEventListener('click', () => {
         sidebar.classList.remove('active');
